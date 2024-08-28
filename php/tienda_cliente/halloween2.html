@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closet Magico</title>
+    <link rel="icon" href="../img/CLOSET-MAGICO-OP-2-removebg-preview.png">
+    <link rel="stylesheet" href="../css/estilohall.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navegacion">
+            <ul class="menu">
+                <li class="lista"><a href="index1.php">PERFIL</a>
+                    
+                </li>
+                <li class="lista"><a href="favoritos.html">FAVORITOS</a>
+                    
+                </li>   
+
+                <li class="buscar">
+                    <form action="get">
+                            <input type="text" placeholder="Encuentra un disfraz">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                </svg>
+                            </button>
+                    </form>
+                </li>
+
+                <li class="lista"><a href="#">CATEGORIAS</a>
+                    <ul class="submenu">
+                        <li><a href="halloween.html">HALLOWEEN</a></li>
+                        <li><a href="folclor.html">FOLCLOR</a></li>
+                        <li><a href="fantasia.html">FANTASIA</a></li>
+                    </ul>
+                </li>
+
+                <li class="lista"><a href="final.html">ALQUILER</a>
+                    <ul class="submenu">
+                        <li>
+                            
+                            <br>Comunicate con nosotros para alquilar un disfraz
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>HALLOWEEN</h2>
+        <div class="card" style="width: 18rem;">
+            <img src="../img/BOMBERO_7945.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bomberos</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Sombrero</li>
+              <li class="list-group-item">Saco</li>
+              <li class="list-group-item">Pantalon</li>
+              <li class="list-group-item">Botas</li>
+            </ul>
+            
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="../img/PIRATA_7972.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pirata</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Sombrero</li>
+              <li class="list-group-item">Parche & pañoleta</li>
+              <li class="list-group-item">Camisa & Pantalon</li>
+              <li class="list-group-item">Espada</li>
+            </ul>
+            
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="../img/DRACULA_7976.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Dracula</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Mascara</li>
+              <li class="list-group-item">Capa</li>
+              <li class="list-group-item">Pantalon</li>
+              <li class="list-group-item">Chaleco & Camisa</li>
+            </ul>
+            
+          </div>
+          
+          
+          <div class="card" style="width: 18rem;">
+            <img src="../img/CHAVO_7943.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chavo del 8</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Gorro</li>
+              <li class="list-group-item">Camisa</li>
+              <li class="list-group-item">Pantaloneta</li>
+              <li class="list-group-item">Medias</li>
+
+            </ul>
+            
+          </div>
+    </section>
+
+    
+<script>
+    document.querySelectorAll('.pagina-item a').forEach(item => {
+        item.addEventListener('click', event => {
+            document.querySelectorAll('.pagina-item').forEach(el => el.classList.remove('active'));
+            event.currentTarget.parentElement.classList.add('active');
+        });
+    });
+</script>
+</body>
+
+<div class="paginacion">
+    <ul>
+        <li class="pagina-item"><a href="halloween.html"></a></li>
+        <br>
+        <li class="pagina-item"><a href="halloween2.html"></a></li>
+        
+    </ul>
+</div>
+
+</html>

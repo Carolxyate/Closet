@@ -1,0 +1,289 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: 'chiller';
+  src: url(../tipog/chiller.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lucida';
+  src: url(../tipog/Lucida\ Handwriting\ Italic.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: rgb(255, 251, 251); 
+  font-family: 'lucida';
+  margin: 0;
+  padding: 0;
+}
+
+.navegacion {
+  background-color: #9B5BA7;
+  
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  font-weight: 600;
+  
+}
+
+.menu > .lista {
+  position: relative;
+  background-color: #C192CC;
+  border-radius: 15px; 
+  padding: 15px; 
+  margin: 25px; 
+}
+
+.menu > .lista > a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.menu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 148px;
+  background-color: white;
+  list-style: none;
+  padding: 10px;
+  box-shadow: 0 8px 16px rgba(197, 135, 197, 0.308);
+  border-radius: 8px;
+  font-size: 15px;
+  color: #9B5BA7;
+  transform: translate(15px, 15px);
+  z-index: 1000; /* Asegura que  esté por encima de otros elementos */
+  
+}
+
+.menu .submenu::before {
+  content: '';
+  position: absolute;
+  top: -29px;
+  left: 2.9px;
+  border-width: 16px;
+  border-style: solid;
+  border-color: transparent transparent rgb(255, 255, 255) transparent;
+}
+
+.menu .lista:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  margin: 18px 0;
+}
+.submenu li a {
+  color: #9B5BA7;
+  text-decoration: none;
+}
+.submenu li svg {
+  width: 60px;
+  height: 50px;
+  color: #9B5BA7;
+  display: block;
+  margin: 0 auto; 
+}
+
+.menu .submenu br {
+  display: flex;
+  justify-content: center;
+}
+.menu .submenu img {
+  width: 28px; 
+  height: 28px; 
+  margin-right: 25px; 
+  vertical-align: middle;
+}
+
+.menu .submenu .social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.buscar form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 30px;
+}
+.buscar input[type="text"] {
+  width: 280%;
+  padding: 10px 155px 10px 30px;
+  border: 1px solid #fffefe;
+  border-radius: 8px;
+  background-color: rgba(250, 246, 246, 0.918);
+  font-family: 'lucida';
+  font-weight: 600;
+}
+.buscar input[type="text"]::placeholder {
+  color: #9B5BA7; 
+  font-family: 'lucida'; 
+  font-size: 15px;
+}
+
+.buscar button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.buscar button svg {
+  fill: rgb(133, 9, 248);
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/* Estilo general para la sección */
+section {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+background-color: #f8f9fa;
+justify-content: space-around;
+}
+section h2{
+color: #9B5BA7;
+}
+
+/* Estilo para la tarjeta */
+.card {
+width: 100px;
+height: 600px;
+border: 2px solid #9B5BA7;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+background-color: #fff;
+text-align: center;
+}
+
+/* Estilo para la imagen */
+.card-img-top {
+width: 60%;
+height: 60%;
+}
+
+/* Estilo para el cuerpo de la tarjeta */
+.card-body {
+padding: 15px;
+}
+
+/* Estilo para el título de la tarjeta */
+.card-title {
+font-size: 1.25rem;
+font-weight: bold;
+margin-bottom: 10px;
+color: #9B5BA7;
+}
+
+/* Estilo para el texto de la tarjeta */
+.card-text {
+font-size: 1rem;
+color: #666;
+}
+
+/* Estilo para la lista */
+.list-group-item {
+font-size: 0.9rem;
+color: #555;
+border: none;
+border-top: 1px solid #eee;
+padding: 5px 15px;
+}
+
+/* Estilo para los enlaces */
+.card-link {
+font-size: 0.9rem;
+color: #bf5ad6;
+text-decoration: none;
+}
+
+.card-link:hover {
+text-decoration: none;
+color: #c52ae0;
+}
+
+/* Ajuste del último borde de la lista */
+.list-group-item:last-child {
+border-bottom: 1px solid #eee;
+}
+
+/* Estilo adicional para el cuerpo de la tarjeta que contiene los enlaces */
+.card-body:last-child {
+border-top: 1px solid #eee;
+padding-top: 10px;
+}
+/*paginacion */
+.paginacion {
+display: flex;
+bottom: 0;
+width: 100%;
+justify-content: space-around;
+align-items: center; 
+padding: 10px 0; 
+}
+
+.paginacion ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+gap: 10px;
+}
+
+.pagina-item {
+width: 30px;
+height: 30px;
+display: flex;
+justify-content: center; 
+align-items: center; 
+background-color: #dcc2e2;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.pagina-item a {
+text-decoration: none;
+color: black;
+display: flex;
+justify-content: center; 
+align-items: center;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+}
+
+.pagina-item:hover {
+background-color: #C192CC;
+}
+
+.pagina-item.active {
+background-color: #9B5BA7;
+color: rgb(240, 59, 247);
+}
+
+.pagina-item.active a {
+color: rgb(135, 52, 230);
+}

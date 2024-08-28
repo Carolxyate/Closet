@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closet Magico</title>
+    <link rel="icon" href="img/CLOSET-MAGICO-OP-2-removebg-preview.png">
+    <link rel="stylesheet" href="css/estilores.css">
+    <link rel="stylesheet" href="css/redes.css">
+    <script src="https://use.fontawesome.com/502b7294a9.js"></script>
+
+</head>
+<body>
+    <div class="red">
+        <div id="facebook"><a href="https://www.facebook.com/closet magico" target="none" class="fa fa-facebook"></a></div>
+        <div id="instagram"><a href="https://www.instagram.com/" class="fa fa-instagram"></a></div>
+        <div id="whatsapp"><a href="#" class="fa fa-whatsapp"></a></div>
+        <div id="correo"><a href="#" class="fa fa-envelope"></a></div>
+    </div>
+    <header>
+        <nav class="navegacion">
+            <ul class="menu">
+                <li class="lista"><a href="index.html">PERFIL</a>
+                    <ul class="submenu">
+                        <li><a href="inicio_sesion.html">INICIAR SESION</a></li>
+                        <li><a href="registro.html">CREAR CUENTA</a></li>
+                        <li>INGRESAR CON TUS REDES</li>
+                        <li class="social">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img src="img/2023_Facebook_icon.svg.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank">
+                                <img src="img/Instagram_icon.png" alt="Instagram">
+                            </a>
+                            <a href="https://www.whatsapp.com" target="_blank">
+                                <img src="img/WhatsApp_icon.png" alt="WhatsApp">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lista"><a href="#">FAVORITOS</a>
+                    <ul class="submenu">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                            </svg>
+                            <br>INICIA SESION O CREA UNA CUENTA PARA VER LOS FAVORITOS DE ESTE AÑO :D
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="buscar">
+                    <form action="get">
+                        <input type="text" placeholder="Encuentra un disfraz">
+                        <button type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </button>
+                    </form>
+                </li>
+
+                <li class="lista"><a href="#">CATEGORIAS</a>
+                    <ul class="submenu">
+                        <li><a href="halloween.html">HALLOWEEN</a></li>
+                        <li><a href="folclor.html">FOLCLOR</a></li>
+                        <li><a href="fantasia.html">FANTASIA</a></li>
+                    </ul>
+                </li>
+
+                <li class="lista"><a href="final.html">ALQUILER</a>
+                    <ul class="submenu">
+                        <li>
+                       
+                            <br>Comunicate con nosotros para alquilar un disfraz
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="registro">
+            <h2>REGISTRARSE</h2>
+            <form action="php/registrar_cliente.php" method="post">
+                <div class="correo">
+                    <label for="email">CORREO ELECTRONICO</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="password">CONTRASEÑA</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+        
+                <div class="names">
+                    <label for="nombre">NOMBRES</label>
+                    <input type="text" id="nombre" name="nombre" required>
+        
+                    <label for="apellido">APELLIDOS</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+            
+                <div class="celu">
+                    <label for="tipo">TIPO DE DOCUMENTO</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="CC">CC(cedula ciudadania)</option>
+                        <option value="PP">PP(pasaporte)</option>
+                        <option value="TI">TI(tarjeta identidad)</option>
+                    </select>
+                
+                    <label for="numero">NUMERO DE DOCUMENTO</label>
+                    <input type="text" id="numero" name="numero" required>
+                    
+                    <label for="telefono">CELULAR</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+        
+                <div class="terminos">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">ACEPTO LOS <a href="/terminos_y_condiciones.html" target="_blank">TERMINOS Y CONDICIONES</a> Y AUTORIZO EL TRATAMIENTO DE DATOS PERSONALES.</label>
+                </div>
+        
+                <div class="registro-social">
+                    <p>REGISTRATE CON TUS REDES</p>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="img/2023_Facebook_icon.svg.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="img/Instagram_icon.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.whatsapp.com" target="_blank">
+                        <img src="img/WhatsApp_icon.png" alt="WhatsApp">
+                    </a>
+                </div>
+        
+                <div class="datos">
+                    <p>Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web, gestionar el acceso a tu cuenta y otros propósitos descritos en nuestra política de privacidad.</p>
+                </div>
+        
+                <div class="boton">
+                    <button type="submit">REGISTRARSE</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script>
+        function mostrarMensaje(event) {
+            event.preventDefault(); // Evitar que se envíe el formulario para esta demostración
+            document.getElementById('mensajeConfirmacion').style.display = 'block';
+        }
+
+        document.querySelectorAll('.lista').forEach(function(lista) {
+            lista.addEventListener('mouseenter', function() {
+                clearTimeout(lista.hideTimeout);
+                lista.querySelector('.submenu').style.display = 'block';
+            });
+            lista.addEventListener('mouseleave', function() {
+                lista.hideTimeout = setTimeout(function() {
+                    lista.querySelector('.submenu').style.display = 'none';
+                }, 300); // 300ms delay before hiding the submenu
+            });
+            lista.querySelector('.submenu').addEventListener('mouseenter', function() {
+                clearTimeout(lista.hideTimeout);
+            });
+            lista.querySelector('.submenu').addEventListener('mouseleave', function() {
+                lista.hideTimeout = setTimeout(function() {
+                    lista.querySelector('.submenu').style.display = 'none';
+                }, 300); // 300ms delay before hiding the submenu
+            });
+        });
+    </script>
+</body>
+</html>
