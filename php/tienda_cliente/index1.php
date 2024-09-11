@@ -24,10 +24,9 @@ $email = $_SESSION['email'];
 
 <body>
 <div class="red">
-    <div id="facebook"><a href="https://www.facebook.com/closet magico" target="none" class="fa fa-facebook"></a></div>
-    <div id="instagram"><a href="https://www.instagram.com/" class="fa fa-instagram"></a></div>
-    <div id="whatsapp"><a href="#" class="fa fa-whatsapp"></a></div>
-    <div id="correo"><a href="#" class="fa fa-envelope"></a></div>
+        <div id="facebook"><a href="https://www.facebook.com/profile.php?id=61560885171162&mibextid=LQQJ4d" target="none" class="fa fa-facebook"></a></div>
+        <div id="instagram"><a href="https://www.instagram.com/elclosetmagico_?igsh=MWhnajMxMG41anNhaA%3D%3D&utm_source=qr" class="fa fa-instagram"></a></div>
+        <div id="whatsapp"><a href="https://web.whatsapp.com/3144403383" class="fa fa-whatsapp"></a></div>
 </div>
     <header>
         <nav class="navegacion">

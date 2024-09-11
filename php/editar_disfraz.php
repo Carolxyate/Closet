@@ -52,7 +52,7 @@ $conn->close();
     <meta charset="UTF-8">
     <title>Editar Disfraz</title>
     <script src="https://use.fontawesome.com/502b7294a9.js"></script>
-
+    <link rel="stylesheet" href="css/redes.css">
     <link rel="stylesheet" href="css/editar.css">
 </head>
 

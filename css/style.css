@@ -204,6 +204,14 @@ footer {
     font-size: 20px;
     font-weight: 600;
 }
+.text1 a{
+    color: inherit; /* Mantiene el color actual */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: color 0.3s ease;
+}
+.text1 a:hover {
+    color: #e452fe; /* Cambia el color al pasar el mouse */
+}
 .text1 .h2{
     display: flex;
     top: -20px;
@@ -233,9 +241,17 @@ footer {
 .Redes1 p {
     display: flex;
     align-items: center;
-    margin: 5px 0;
+    margin: 2px 0;
+}
+.Redes1 a {
+    color: inherit; /* Mantiene el color actual */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: color 0.3s ease;
 }
 
+.Redes1 a:hover {
+    color: #e452fe; /* Cambia el color al pasar el mouse */
+}
 .Redes1 svg {
     width: 40px;
     height: 40px;
@@ -248,14 +264,26 @@ footer {
 
 .imagenes {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
+    align-items: center;
+    gap: 15px;
 }
 
 .imagenes img {
-    width: 150px; 
-    height: 70px;
+    max-width: 110px; /* Ajustar el tamaño de las imágenes */
+    height: auto;
+}
+.imagenes .emprender,
+.imagenes .presidencia {
+    display: flex;
+    justify-content: center;
+}
+
+.imagenes .presidencia img,
+.imagenes .emprender img {
+    max-width: 370px;
+    height: 80px; /* Ajustar el tamaño para logos más grandes */
 }
 
 
