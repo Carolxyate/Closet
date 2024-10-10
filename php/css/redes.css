@@ -17,8 +17,7 @@
 }
 #facebook a:hover{
 	background: #000;
-	padding: 10px 50px;
-	transform: translateX(-40px);
+	
 }
 #instagram a{
 	background: #C192CC;
@@ -31,8 +30,7 @@
 }
 #instagram a:hover{
 	background: #000;
-	padding: 10px 50px;
-	transform: translateX(-40px);
+	
 
 }
 #whatsapp a{
@@ -46,8 +44,7 @@
 }
 #whatsapp a:hover{
 	background: #000;
-	padding: 10px 50px;
-	transform: translateX(-40px);
+	
 
 }
 #correo a{
@@ -61,7 +58,5 @@
 }
 #correo a:hover{
 	background: #000;
-	padding: 10px 50px;
-	transform: translateX(-40px);
-
+	
 }

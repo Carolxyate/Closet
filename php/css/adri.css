@@ -22,6 +22,7 @@ body {
     padding: 0;
 }
 
+
 .navegacion {
     background-color: #9B5BA7;
     
@@ -57,11 +58,11 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 148px;
-    background-color: white;
+    width: 128px;
+    background-color: rgb(255, 255, 255);
     list-style: none;
-    padding: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     font-size: 15px;
     color: #9B5BA7;
@@ -113,7 +114,7 @@ body {
 .menu .submenu .social {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 2px;
     margin-top: 10px;
 }
 
@@ -156,10 +157,12 @@ body {
 section {
     margin: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    width: 200px;
+    justify-content: center;
     border-radius: 8px;
+    background-color: #efefef;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 section h2 {
@@ -175,9 +178,9 @@ section p {
 
 section a {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #d49ee0;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -185,5 +188,5 @@ section a {
 }
 
 section a:hover {
-    background-color: #0056b3;
+    background-color: #9B5BA7;
 }

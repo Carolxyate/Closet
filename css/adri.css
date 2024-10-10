@@ -58,11 +58,11 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 148px;
-    background-color: white;
+    width: 128px;
+    background-color: rgb(255, 255, 255);
     list-style: none;
     padding: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     font-size: 15px;
     color: #9B5BA7;
@@ -114,7 +114,7 @@ body {
 .menu .submenu .social {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 2px;
     margin-top: 10px;
 }
 

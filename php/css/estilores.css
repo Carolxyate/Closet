@@ -1,0 +1,376 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'chiller';
+    src: url(../tipog/chiller.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lucida';
+    src: url(../tipog/Lucida\ Handwriting\ Italic.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'lucida';
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion {
+    background-color: #9B5BA7;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    font-weight: 600;
+
+}
+
+.menu > .lista {
+    position: relative;
+    background-color: #C192CC;
+    border-radius: 15px; 
+    padding: 15px; 
+    margin: 25px; 
+}
+
+
+.menu > .lista > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.menu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 148px;
+    background-color: white;
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-size: 15px;
+    color: #9B5BA7;
+    transform: translate(20px, 20px);
+    z-index: 1000;
+}
+.menu .submenu::before {
+    content: '';
+    position: absolute;
+    top: -29px;
+    left: 2.9px;
+    border-width: 16px;
+    border-style: solid;
+    border-color: transparent transparent rgb(255, 255, 255) transparent;
+}
+
+.menu .lista:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 18px 0;
+}
+.submenu li a{
+    color: #9B5BA7;
+    text-decoration: none;
+}
+.submenu li svg {
+    width: 60px;
+    height: 50px;
+    color: #9B5BA7;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu .submenu br {
+    display: flex;
+    justify-content: center;
+}
+.menu .submenu img {
+    width: 28px; 
+    height: 28px; 
+    margin-right: 25px; 
+    vertical-align: middle;
+}
+
+.menu .submenu .social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.buscar form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 30px;
+  }
+.buscar input[type="text"] {
+    width: 280%;
+    padding: 10px 155px 10px 30px;
+    border: 1px solid #fffefe;
+    border-radius: 8px;
+    background-color: rgba(250, 246, 246, 0.918);
+    font-family: 'lucida';
+    font-weight: 600;
+
+    
+  }
+  .buscar input[type="text"]::placeholder {
+    color: #9B5BA7; 
+    font-family: 'lucida'; 
+    font-size: 15px;
+  }
+  
+  .buscar button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+
+.buscar button svg {
+    fill: rgb(133, 9, 248);
+    width: 20px;
+    height: 20px;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+
+
+/* resgistro /////////////////////////////////*/
+.registro {
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 1000px;
+    height: 670px;
+}
+
+.registro h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'lucida';
+    color: #9B5BA7;
+}
+
+
+.registro .correo{
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.registro .correo label{
+    padding: 10px;
+    display: flex;
+    position: relative;
+    top: -10px;
+    font-family: 'lucida';
+    color: #9B5BA7;
+    margin-bottom: 5px;
+    font-weight: 600;
+    left: 140px;
+
+}
+
+.registro .correo input{
+    display: flex;
+    position: relative;
+    top: 20px;
+    width: 300px;
+    right: 90px;
+    padding: 10px;
+    border: 3px solid #9B5BA7;
+    border-radius: 10px;
+    font-family: 'lucida';
+    margin-bottom: 15px;
+    font-weight: 600;
+
+}
+.registro .names{
+    padding: 8px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    margin-bottom: 15px;
+    font-size: 15px;
+    left: 20px;
+}
+.registro .names label{
+    display: flex;
+    position: relative;
+    top: 5px;
+    padding: 8px;
+    font-family: 'lucida';
+    color: #9B5BA7;
+    margin-bottom: 5px;
+    font-weight: 600;
+    left: 220px;
+    
+}
+.registro .names input{
+    display: flex;
+    width: 310px;
+    position: relative;
+    top: 30px;
+    padding: 10px;
+    border: 3px solid #9B5BA7;
+    border-radius: 10px;
+    font-family: 'lucida';
+    margin-bottom: 15px;
+    font-weight: 600;
+
+}
+
+.registro .celu {
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.registro .celu select {
+    padding: 10px;
+    border: 3px solid #9B5BA7;
+    border-radius: 10px;
+    font-family: 'lucida';
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    position: relative;
+    top: 60px;
+    width: 1000px;
+    right: 20px;
+}
+
+.registro .celu label{
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 100px;
+    padding: 8px;
+    font-family: 'lucida';
+    color: #9B5BA7;
+    margin-bottom: 5px;
+    align-self: center;
+    font-weight: 600;
+
+}
+.registro .celu input{
+    padding: 10px;
+    display: flex;
+    position: relative;
+    width: 900px;
+    top: 60px;
+    border: 3px solid #9B5BA7;
+    border-radius: 10px;
+    font-family: 'lucida';
+    margin-bottom: 15px;
+    font-weight: 600;
+    right: 50px;
+
+}
+.registro .terminos{
+    display: flex;
+    padding: 60px;
+    font-weight: 600;
+
+}
+.registro .terminos input {
+    margin-right: 50px;
+    width: 16px;
+    margin-left: 30px;
+}
+
+.registro .terminos label {
+    color: #110f11;
+}
+.registro .terminos label a {
+    color: #9B5BA7;
+    text-decoration: none;
+}
+/*redes s*/
+
+.registro .registro-social {
+    text-align: center;
+    margin-top: -40px;
+    font-weight: 600;
+
+}
+.registro .registro-social p {
+    margin-bottom: 10px;
+    color: #9B5BA7;
+}
+
+.registro .registro-social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    justify-content: space-between;
+
+}
+
+.registro .registro-social a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*datos texto*/
+.registro .datos{
+    padding: 10px;
+    color: #9B5BA7;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.registro .boton{
+    padding: 20px;
+    text-align: center;
+}
+
+.registro .boton button {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #C192CC;
+    color: #fff;
+    font-family: 'lucida';
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    width: 20%; /* Para ocupar el ancho completo */
+}
+
+
+
+/*C192CC-9B5BA7 colores morados*/

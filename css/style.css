@@ -158,7 +158,7 @@ footer {
     display: flex;
     position: relative;
     left: 50px;
-    height:343px;
+    height:390px;
     width: 95%;
     border-radius: 10px;
     justify-content: center;
@@ -169,7 +169,7 @@ footer {
 .footer-background {
     background-color: #C192CC;
     width: 95%;
-    height: 100%;
+    height: 110%;
     padding: 40px;
     position: relative;
     top: -60px;
@@ -192,7 +192,7 @@ footer {
 }
 
 .imagen-logo img {
-    width: 220px;
+    width: 240px;
     height: 200px;
 }
 
@@ -267,11 +267,11 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .imagenes img {
-    max-width: 110px; /* Ajustar el tamaño de las imágenes */
+    max-width: 100px; /* Ajustar el tamaño de las imágenes */
     height: auto;
 }
 .imagenes .emprender,
@@ -282,11 +282,11 @@ footer {
 
 .imagenes .presidencia img,
 .imagenes .emprender img {
-    max-width: 370px;
+    max-width: 400px;
     height: 80px; /* Ajustar el tamaño para logos más grandes */
 }
 
 
 .seccion-en-blanco {
-    height: 290px;
+    height: 200px;
 }

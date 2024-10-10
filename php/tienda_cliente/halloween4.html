@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closet Magico</title>
+    <link rel="icon" href="../img/CLOSET-MAGICO-OP-2-removebg-preview.png">
+    <link rel="stylesheet" href="../css/estilohall.css">
+    <link rel="stylesheet" href="../css/redes.css">
+</head>
+
+<body>
+    <div class="red">
+        <div id="facebook"><a href="https://www.facebook.com/profile.php?id=61560885171162&mibextid=LQQJ4d" target="none" class="fa fa-facebook"></a></div>
+        <div id="instagram"><a href="https://www.instagram.com/elclosetmagico_?igsh=MWhnajMxMG41anNhaA%3D%3D&utm_source=qr" class="fa fa-instagram"></a></div>
+        <div id="whatsapp"><a href="https://wa.me/3144403383" class="fa fa-whatsapp" target="_blank"></a></div>
+    </div>
+    <header>
+        <nav class="navegacion">
+            <ul class="menu">
+                <li class="lista"><a href="index1.php">PERFIL</a>
+                    
+                </li>
+                <li class="lista"><a href="favoritos.html">FAVORITOS</a>
+                    
+                </li>   
+
+                <li class="buscar">
+                    <form action="">
+                            <input type="text" placeholder="Encuentra un disfraz">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                </svg>
+                            </button>
+                    </form>
+                </li>
+
+                <li class="lista"><a href="#">CATEGORIAS</a>
+                    <ul class="submenu">
+                        <li><a href="halloween.html">HALLOWEEN</a></li>
+                        <li><a href="folclor.html">FOLCLOR</a></li>
+                        <li><a href="fantasia.html">FANTASIA</a></li>
+                    </ul>
+                </li>
+
+                <li class="lista"><a href="final.html">ALQUILER</a>
+                    <ul class="submenu">
+                        <li>
+                            
+                            <br>Comunicate con nosotros para alquilar un disfraz
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>HALLOWEEN</h2>
+        <div class="card" style="width: 18rem;">
+          <img src="../img/BEBE_7951.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Bebe</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Camisa</li>
+            <li class="list-group-item">Chupon</li>
+            <li class="list-group-item">Gorro</li>
+            <li class="list-group-item">Pantalon</li>
+
+
+          </ul>
+          
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="../img/4.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Mujer maravilla</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Balaca</li>
+            <li class="list-group-item">Camisa</li>
+            <li class="list-group-item">Short</li>
+            <li class="list-group-item">Mangas</li>
+          </ul>
+          
+        </div>
+          
+          
+          <div class="card" style="width: 18rem;">
+            <img src="../img/SUPERMAN_7957.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Superman</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Capa</li>
+              <li class="list-group-item">Traje</li>
+            </ul>
+            
+          </div>
+          
+    </section>
+
+    
+<script>
+    document.querySelectorAll('.pagina-item a').forEach(item => {
+        item.addEventListener('click', event => {
+            document.querySelectorAll('.pagina-item').forEach(el => el.classList.remove('active'));
+            event.currentTarget.parentElement.classList.add('active');
+        });
+    });
+</script>
+</body>
+
+<div class="paginacion">
+    <ul>
+        <li class="pagina-item"><a href="halloween.html"></a></li>
+        <br>
+        <li class="pagina-item"><a href="halloween2.html"></a></li>
+        <br>
+        <li class="pagina-item"><a href="halloween3.html"></a></li>
+        <br>
+        <li class="pagina-item"><a href="halloween4.html"></a></li>
+        <br>
+        <li class="pagina-item"><a href="halloween5.html"></a></li>
+    </ul>
+</div>
+
+</html>
