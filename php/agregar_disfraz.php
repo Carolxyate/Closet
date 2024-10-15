@@ -17,16 +17,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
-    $imagen = $_POST['imagen'];
     $categoria_id = $_POST['categoria_id'];
 
-    // Insertar el nuevo disfraz en la base de datos
-    $sql = "INSERT INTO disfraces (nombre, descripcion, imagen, categoria_id) VALUES ('$nombre', '$descripcion', '$imagen', '$categoria_id')";
+    // Manejar la carga de la imagen
+    $imagen = $_FILES['imagen']['name'];
+    $target_dir = "./img/"; // Carpeta donde se guardarán las imágenes
+    $target_file = $target_dir . basename($_FILES["imagen"]["name"]);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Nuevo disfraz agregado exitosamente";
+    
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    $check = getimagesize($_FILES["imagen"]["tmp_name"]);
+    if ($check !== false) {
+        if (move_uploaded_file($_FILES["imagen"]["tmp_name"], $target_file)) {
+            $sql = "INSERT INTO disfraces (nombre, descripcion, imagen, categoria_id) VALUES ('$nombre', '$descripcion', '$target_file', '$categoria_id')";
+            if ($conn->query($sql) === TRUE) {
+                echo "Nuevo disfraz agregado exitosamente";
+            } else {
+                echo "Error agregando el disfraz: " . $conn->error;
+            }
+        } else {
+            echo "Error subiendo la imagen.";
+        }
     } else {
-        echo "Error agregando el disfraz: " . $conn->error;
+        echo "El archivo no es una imagen.";
     }
 }
 
@@ -51,15 +64,9 @@ $conn->close();
     <title>Agregar Disfraz</title>
     <script src="https://use.fontawesome.com/502b7294a9.js"></script>
     <link rel="stylesheet" href="css/editar.css">
-    <link rel="stylesheet" href="css/redes.css">
 </head>
 <body>
-<div class="red">
-    <div id="facebook"><a href="https://www.facebook.com/closet magico" target="none" class="fa fa-facebook"></a></div>
-    <div id="instagram"><a href="https://www.instagram.com/" class="fa fa-instagram"></a></div>
-    <div id="whatsapp"><a href="https://www.whatsapp.com/" class="fa fa-whatsapp"></a></div>
-    <div id="correo"><a href="https://www.gmail.com/" class="fa fa-envelope"></a></div>
-</div>
+
 <header>
     <nav class="navegacion">
         <ul class="menu">
@@ -79,13 +86,13 @@ $conn->close();
     </nav>
 </header>
 <h1>Agregar Disfraz</h1>
-<form class="editar" action="agregar_disfraz.php" method="post">
+<form class="editar" action="agregar_disfraz.php" method="post" enctype="multipart/form-data">
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre"><br>
     <label for="descripcion">Descripción:</label>
     <textarea id="descripcion" name="descripcion"></textarea><br>
-    <label for="imagen">URL de la imagen:</label>
-    <input type="text" id="imagen" name="imagen"><br>
+    <label for="imagen">Subir Imagen:</label>
+    <input type="file" id="imagen" name="imagen" accept="img/*"><br>
     <label for="categoria_id">Categoría:</label>
     <select id="categoria_id" name="categoria_id">
         <?php foreach($categorias as $categoria): ?>

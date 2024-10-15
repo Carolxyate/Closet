@@ -36,16 +36,10 @@ $conn->close();
     <title>Eliminar Disfraz</title>
     <link rel="icon" href="img/CLOSET-MAGICO-OP-2-removebg-preview.png">
     <script src="https://use.fontawesome.com/502b7294a9.js"></script>
-    <link rel="stylesheet" href="css/redes.css">
     <link rel="stylesheet" href="css/editar.css">
 </head>
 <body>
-<div class="red">
-        <div id="facebook"><a href="https://www.facebook.com/closet magico" target="none" class="fa fa-facebook"></a></div>
-        <div id="instagram"><a href="https://www.instagram.com/" class="fa fa-instagram"></a></div>
-        <div id="whatsapp"><a href="https://www.whatsapp.com/" class="fa fa-whatsapp"></a></div>
-        <div id="correo"><a href="https://www.gmail.com/" class="fa fa-envelope"></a></div>
-    </div>
+
     <header>
         <nav class="navegacion">
             <ul class="menu">

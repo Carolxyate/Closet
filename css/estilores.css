@@ -2,20 +2,8 @@
     padding: 0;
     margin: 0;
 }
-@font-face {
-    font-family: 'chiller';
-    src: url(../tipog/chiller.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'lucida';
-    src: url(../tipog/Lucida\ Handwriting\ Italic.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
+
 body {
-    font-family: 'lucida';
     margin: 0;
     padding: 0;
 }
@@ -125,14 +113,12 @@ body {
     border: 1px solid #fffefe;
     border-radius: 8px;
     background-color: rgba(250, 246, 246, 0.918);
-    font-family: 'lucida';
     font-weight: 600;
 
     
   }
   .buscar input[type="text"]::placeholder {
     color: #9B5BA7; 
-    font-family: 'lucida'; 
     font-size: 15px;
   }
   
@@ -173,7 +159,6 @@ main {
 .registro h2 {
     text-align: center;
     margin-bottom: 15px;
-    font-family: 'lucida';
     color: #9B5BA7;
 }
 
@@ -190,7 +175,6 @@ main {
     display: flex;
     position: relative;
     top: -10px;
-    font-family: 'lucida';
     color: #9B5BA7;
     margin-bottom: 5px;
     font-weight: 600;
@@ -207,7 +191,6 @@ main {
     padding: 10px;
     border: 3px solid #9B5BA7;
     border-radius: 10px;
-    font-family: 'lucida';
     margin-bottom: 15px;
     font-weight: 600;
 
@@ -226,7 +209,6 @@ main {
     position: relative;
     top: 5px;
     padding: 8px;
-    font-family: 'lucida';
     color: #9B5BA7;
     margin-bottom: 5px;
     font-weight: 600;
@@ -241,7 +223,6 @@ main {
     padding: 10px;
     border: 3px solid #9B5BA7;
     border-radius: 10px;
-    font-family: 'lucida';
     margin-bottom: 15px;
     font-weight: 600;
 
@@ -258,7 +239,6 @@ main {
     padding: 10px;
     border: 3px solid #9B5BA7;
     border-radius: 10px;
-    font-family: 'lucida';
     margin-bottom: 15px;
     font-weight: 600;
     display: flex;
@@ -274,7 +254,6 @@ main {
     top: 10px;
     left: 100px;
     padding: 8px;
-    font-family: 'lucida';
     color: #9B5BA7;
     margin-bottom: 5px;
     align-self: center;
@@ -289,7 +268,6 @@ main {
     top: 60px;
     border: 3px solid #9B5BA7;
     border-radius: 10px;
-    font-family: 'lucida';
     margin-bottom: 15px;
     font-weight: 600;
     right: 50px;

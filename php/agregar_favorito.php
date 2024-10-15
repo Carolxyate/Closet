@@ -27,11 +27,7 @@ if ($conn->connect_error) {
 </style>
 
 <body>
-<div class="red">
-        <div id="facebook"><a href="https://www.facebook.com/profile.php?id=61560885171162&mibextid=LQQJ4d" target="none" class="fa fa-facebook"></a></div>
-        <div id="instagram"><a href="https://www.instagram.com/elclosetmagico_?igsh=MWhnajMxMG41anNhaA%3D%3D&utm_source=qr" class="fa fa-instagram"></a></div>
-        <div id="whatsapp"><a href="https://web.whatsapp.com/3144403383" class="fa fa-whatsapp"></a></div>
-    </div>
+
 <header>
     <nav class="navegacion">
         <ul class="menu">
@@ -46,7 +42,7 @@ if ($conn->connect_error) {
                     </button>
                 </form>
             </li>
-            <li class="lista"><a href="agregar_favorito">ver disfraces</a></li>
+            <li class="lista"><a href="#">ver disfraces</a></li>
         </ul>
     </nav>
 </header>

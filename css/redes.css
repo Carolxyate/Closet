@@ -47,16 +47,3 @@
 	
 
 }
-#correo a{
-	background: #C192CC;
-	padding: 15px 30px;
-	color: #fff;
-	text-decoration: none;
-    border: 1px solid #9B5BA7; 
-	width: 20px;
-	transition: all .4s ease;
-}
-#correo a:hover{
-	background: #000;
-	
-}

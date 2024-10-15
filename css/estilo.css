@@ -2,22 +2,10 @@
     padding: 0;
     margin: 0;
 }
-@font-face {
-    font-family: 'chiller';
-    src: url(../tipog/chiller.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'lucida';
-    src: url(../tipog/Lucida\ Handwriting\ Italic.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
+
 body {
     background-image: url(../img/Portada\ web.jpg);
     background-size: cover ;
-    font-family: 'lucida';
     margin: 0;
     padding: 0;
 }

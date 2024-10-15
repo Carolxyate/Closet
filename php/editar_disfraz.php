@@ -19,10 +19,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
-    $imagen = $_POST['imagen'];
-
-    // Actualizar el disfraz en la base de datos
-    $sql = "UPDATE disfraces SET nombre='$nombre', descripcion='$descripcion', imagen='$imagen' WHERE id=$id";
+    
+    // Verificar si se ha subido una imagen
+    if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
+        // Obtener la información del archivo
+        $imagen = $_FILES['imagen'];
+        $nombreImagen = $imagen['name'];
+        $rutaTemporal = $imagen['tmp_name'];
+        $rutaDestino = 'img/' . $nombreImagen; // Carpeta donde guardar las imágenes
+        
+        // Mover el archivo a la carpeta de destino
+        if (move_uploaded_file($rutaTemporal, $rutaDestino)) {
+            // Actualizar el disfraz con la nueva imagen
+            $sql = "UPDATE disfraces SET nombre='$nombre', descripcion='$descripcion', imagen='$rutaDestino' WHERE id=$id";
+        } else {
+            echo "Error al mover la imagen.";
+            exit;
+        }
+    } else {
+        // Si no se subió una imagen, solo actualiza el nombre y la descripción
+        $sql = "UPDATE disfraces SET nombre='$nombre', descripcion='$descripcion' WHERE id=$id";
+    }
 
     if ($conn->query($sql) === TRUE) {
         echo "Disfraz actualizado exitosamente";
@@ -43,6 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+
 $conn->close();
 ?>
 
@@ -52,18 +70,12 @@ $conn->close();
     <meta charset="UTF-8">
     <title>Editar Disfraz</title>
     <script src="https://use.fontawesome.com/502b7294a9.js"></script>
-    <link rel="stylesheet" href="css/redes.css">
     <link rel="stylesheet" href="css/editar.css">
 </head>
 
 
 <body>
-<div class="red">
-        <div id="facebook"><a href="https://www.facebook.com/closet magico" target="none" class="fa fa-facebook"></a></div>
-        <div id="instagram"><a href="https://www.instagram.com/" class="fa fa-instagram"></a></div>
-        <div id="whatsapp"><a href="https://www.whatsapp.com/" class="fa fa-whatsapp"></a></div>
-        <div id="correo"><a href="https://www.gmail.com/" class="fa fa-envelope"></a></div>
-    </div>
+
     <header>
         <nav class="navegacion">
             <ul class="menu">
@@ -89,15 +101,16 @@ $conn->close();
         </nav>
     </header>
     <h1>Editar Disfraz</h1>
-    <form class="editar" action="editar_disfraz.php" method="post">
-        <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" value="<?php echo $row['nombre']; ?>"><br>
-        <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion"><?php echo $row['descripcion']; ?></textarea><br>
-        <label for="imagen">URL de la imagen:</label>
-        <input type="text" id="imagen" name="imagen" value="<?php echo $row['imagen']; ?>"><br>
-        <input type="submit" value="Actualizar">
-    </form>
+    <form class="editar" action="editar_disfraz.php" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" value="<?php echo $row['nombre']; ?>"><br>
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion"><?php echo $row['descripcion']; ?></textarea><br>
+    <label for="imagen">Selecciona una nueva imagen:</label>
+    <input type="file" id="imagen" name="imagen"><br>
+    <input type="submit" value="Actualizar">
+</form>
+
 </body>
 </html>
